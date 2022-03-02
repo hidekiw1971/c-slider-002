@@ -29,13 +29,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       // スクロール方向の判断
       if (dir == -1) {
         // 画像1枚分左へスクロール
-        $("#slide ul").animate({ "left": "-=375px" }, duration,
+        // $("#slide ul").animate({ "left": "-=375px" }, duration, // sp size
+        $("#slide ul").animate({ "left": "-=768px" }, duration, // tb seize
           function () {
             // リストの順番を変更
             $(this).append($("#slide li:first-child"));
 
             // リストの位置を変更
-            $(this).css("left", -375);
+            // $(this).css("left", -375); // sp size
+            $(this).css("left", -768); // tb size
           });
       } else {
         // 画像1枚分右へスクロール
@@ -45,7 +47,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             $(this).prepend($("#slide li:last-child"));
 
             // リストの位置を変更
-            $(this).css("left", -375);
+            // $(this).css("left", -375); // sp size
+            $(this).css("left", -768); // tb size
 
             // 左方向へリセット
             dir = -1;

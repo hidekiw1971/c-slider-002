@@ -8,6 +8,7 @@
   overflow: hidden;
   height: 375px;
   @include mq(md) {
+    height: 768px;
   }
   @include mq(xl) {
   }
@@ -17,6 +18,7 @@
   position: absolute;
   width: 1125px;
   @include mq(md) {
+    width: 2304px;
   }
   @include mq(xl) {
   }
@@ -27,6 +29,7 @@
   width: 375px;
   list-style-type: none;
   @include mq(md) {
+    width: 768px;
   }
   @include mq(xl) {
   }

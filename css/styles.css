@@ -173,41 +173,34 @@ select::-ms-expand {
   display: none;
 }
 
-.inner {
-  width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media screen and (min-width: 768px) {
-  .inner {
-    max-width: 1150px;
-    padding-right: 25px;
-    padding-left: 25px;
-  }
-}
-
-.test {
-  font-size: 20px;
-  font-size: 1.25rem;
-  background-color: #111;
-  color: #fff;
-}
-
 #slide {
   position: relative;
   overflow: hidden;
   height: 375px;
 }
+@media screen and (min-width: 768px) {
+  #slide {
+    height: 768px;
+  }
+}
 #slide ul {
   position: absolute;
   width: 1125px;
+}
+@media screen and (min-width: 768px) {
+  #slide ul {
+    width: 2304px;
+  }
 }
 #slide li {
   float: left;
   width: 375px;
   list-style-type: none;
+}
+@media screen and (min-width: 768px) {
+  #slide li {
+    width: 768px;
+  }
 }
 #nextBtn {
   position: absolute;
