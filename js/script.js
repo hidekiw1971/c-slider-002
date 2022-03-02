@@ -1,50 +1,44 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-  var topBtn = $('.pagetop');
-  topBtn.hide();
 
-  // ボタンの表示設定
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
+  $(function () {
+    // スクロールの方向　-1の時は左、1の時は右
+    var dir = -1;
+
+    // スクロールのインターバル(何秒ごとにスクロールさせるか。3000ミリ秒に設定)
+    var interval = 3000;
+
+    // スクロールのスピード(700ミリ秒に設定）
+    var duration = 700;
+
+    // タイマー用の変数
+    var timer;
+
+    // リストの順番を変更(3番目を1番最初にする)
+    $("#slide ul").prepend($("#slide li:last-child"));
+
+    // リストの位置を変更(画像1枚分ずらす)
+    $("#slide ul").css("left", -375);
+
+    // 3000ミリ秒(変数intervalの値)ごとにslideTime()関数を実行
+    timer = setInterval(slideTimer, interval);
+
+    // slideTimer()関数
+    function slideTimer() {
+      // 画像1枚分左へスクロール
+      $("#slide ul").animate({ "left" : "-=375px" }, duration,
+      function() {
+        // リストの順番を変更
+        $(this).append($("#slide li:first-child"));
+
+        // リストの位置を変更
+        $(this).css("left", -375);
+      });
+
     }
-  });
-
-  // ボタンをクリックしたらスクロールして上に戻る
-  topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
-    return false;
-  });
-
-  //ドロワーメニュー
-  $("#MenuButton").click(function () {
-    // $(".l-drawer-menu").toggleClass("is-show");
-    // $(".p-drawer-menu").toggleClass("is-show");
-    $(".js-drawer-open").toggleClass("open");
-    $(".drawer-menu").toggleClass("open");
-    $("html").toggleClass("is-fixed");
 
   });
 
-
-
-  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
-
-  $(document).on('click', 'a[href*="#"]', function () {
-    let time = 400;
-    let header = $('header').innerHeight();
-    let target = $(this.hash);
-    if (!target.length) return;
-    let targetY = target.offset().top - header;
-    $('html,body').animate({ scrollTop: targetY }, time, 'swing');
-    return false;
-  });
 
 });

@@ -2,7 +2,7 @@
 
 ## js slider
 
-- javascriptで標準スライダーを作成
+- javascript で標準スライダーを作成
 
 ## イメージ画像
 
@@ -10,7 +10,7 @@
 
 ## portfolio url:
 
-- https://css-md-0000.wtb.cfbx.jp/
+- https://css-md-0015.wtb.cfbx.jp/
 
 ## 使い方
 
@@ -23,11 +23,14 @@
 
 ## 参考にしたサイト
 
-- xxx
+- 【2021 年版】favicon（ファビコン）の設定方法と画像の作り方
+- https://zenn.dev/pacchiy/articles/e4dcd7bd29d387
+- Favicon ジェネレーターについて
+- https://favicon-generator.mintsu-dev.com/
 
 ## 更新履歴
 
-- 2022/3/2 初版 作成中
+- 2022/3/2 初版 ノーマル版作成完了（sp size 版）
 
 ## 環境・使い方
 
