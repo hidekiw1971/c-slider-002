@@ -26,19 +26,58 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
     // slideTimer()関数
     function slideTimer() {
-      // 画像1枚分左へスクロール
-      $("#slide ul").animate({ "left" : "-=375px" }, duration,
-      function() {
-        // リストの順番を変更
-        $(this).append($("#slide li:first-child"));
+      // スクロール方向の判断
+      if (dir == -1) {
+        // 画像1枚分左へスクロール
+        $("#slide ul").animate({ "left": "-=375px" }, duration,
+          function () {
+            // リストの順番を変更
+            $(this).append($("#slide li:first-child"));
 
-        // リストの位置を変更
-        $(this).css("left", -375);
-      });
+            // リストの位置を変更
+            $(this).css("left", -375);
+          });
+      } else {
+        // 画像1枚分右へスクロール
+        $("#slide ul").animate({ "left": "+=375" },
+          duration, function () {
+            // リストの順番を変更
+            $(this).prepend($("#slide li:last-child"));
 
+            // リストの位置を変更
+            $(this).css("left", -375);
+
+            // 左方向へリセット
+            dir = -1;
+          });
+      }
     }
 
+    // 前に戻るボタン
+    $("#prevBtn").click(function() {
+      // スクロール方向の切り替え(右)
+      dir = 1;
+
+    // タイマーを停止して再スタート
+    clearInterval(timer);
+    timer = setInterval(slideTimer, interval);
+
+    // 初回の関数実行
+    slideTimer();
   });
 
+    // 次へ進むボタン
+    $("#nextBtn").click(function() {
+      // スクロール方向の切り替え(左)
+      dir = -1;
+
+      // タイマーを停止して再スタート
+      clearInterval(timer);
+      timer = setInterval(slideTimer, interval);
+
+      // 初回の関数実行
+      slideTimer();
+  });
+});
 
 });

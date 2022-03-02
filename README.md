@@ -8,7 +8,6 @@
 
 <img width="424" alt="image" src="https://user-images.githubusercontent.com/99580997/156355990-e9dc09cf-5298-4c49-b468-51b60bb339b4.png">
 
-
 ## portfolio url:
 
 - https://css-md-0015.wtb.cfbx.jp/
@@ -20,7 +19,7 @@
 
 ## 注意事項
 
-- sp版のみ作成なので、sp sizeで確認して下さい。
+- sp 版のみ作成なので、sp size で確認して下さい。
 
 ## 参考にしたサイト
 
@@ -31,6 +30,7 @@
 
 ## 更新履歴
 
+- 2022/3/2 初版 ノーマル版作成完了（sp size 版 pre、next ボタン追記）
 - 2022/3/2 初版 ノーマル版作成完了（sp size 版）
 
 ## 環境・使い方
@@ -42,8 +42,8 @@
 
 ## 仕様
 
--
--
+- 自動スクロール
+- pre、next ボタン付き
 
 ## 備考
 
