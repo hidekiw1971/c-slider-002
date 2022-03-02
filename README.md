@@ -6,7 +6,8 @@
 
 ## イメージ画像
 
-- xxx
+<img width="424" alt="image" src="https://user-images.githubusercontent.com/99580997/156355990-e9dc09cf-5298-4c49-b468-51b60bb339b4.png">
+
 
 ## portfolio url:
 
@@ -19,7 +20,7 @@
 
 ## 注意事項
 
-- xxx
+- sp版のみ作成なので、sp sizeで確認して下さい。
 
 ## 参考にしたサイト
 
